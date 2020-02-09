@@ -36,8 +36,7 @@ export const CardFooter = styled(RectButton)`
     padding: 20px 20px;
     flex-direction: row;
     align-items: center;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-radius: 4px;
 `;
 
 export const CardFooterText = styled.Text.attrs({ numberOfLines: 2 })`

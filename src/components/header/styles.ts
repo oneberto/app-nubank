@@ -1,8 +1,10 @@
 import styled from 'styled-components/native';
 
-export const HeaderContainer = styled.View`
+import { RectButton } from 'react-native-gesture-handler';
+
+export const HeaderContainer = styled(RectButton)`
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
 `;
 
 export const HeaderTop = styled.View`

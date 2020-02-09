@@ -4,14 +4,23 @@ import React from 'react';
 import { HeaderContainer, HeaderLogo, HeaderTop, HeaderName } from './styles';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
-export default function Header() {
+interface IHeaderProps {
+    onPress: () => void;
+    activeMenu: boolean;
+}
+
+export default function Header({ onPress, activeMenu }: IHeaderProps) {
     return (
-        <HeaderContainer>
+        <HeaderContainer onPress={() => onPress()}>
             <HeaderTop>
                 <HeaderLogo />
                 <HeaderName>Jose</HeaderName>
             </HeaderTop>
-            <Icons name="keyboard-arrow-down" size={20} color="#FFF" />
+            <Icons
+                name={activeMenu ? 'expand-less' : 'expand-more'}
+                size={20}
+                color="#FFF"
+            />
         </HeaderContainer>
     );
 }
